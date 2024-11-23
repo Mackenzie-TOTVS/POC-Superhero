@@ -127,9 +127,9 @@ export default function VitrineAnimeCard({ animes }) {
     </ul>
   </li>
   <li>
-    <strong>Mapeamento e Renderização</strong>
+
+<strong>Mapeamento e Renderização</strong>
     
-    ```
     .map((data) => (
           <article className={styles.card}>
             <img
@@ -144,15 +144,14 @@ export default function VitrineAnimeCard({ animes }) {
             <p>Duração: {data.duration}</p>
             <p>Rank: {data.rank}</p>
           </article>
-    ```
 
 
-    <p>Os dados filtrados são mapeados, gerando um card (<code>&lt;article&gt;</code>) para cada anime. Cada card contém:</p>
-    <ul>
-      <li><code>&lt;img&gt;</code>: Exibe a imagem do anime, usando <code>large_image_url</code>.</li>
-      <li><code>&lt;h1&gt;</code>: Exibe o nome do anime (campo <code>nome</code>).</li>
-      <li><code>&lt;p&gt;</code>: Mostra informações adicionais como número de episódios e favoritos.</li>
-    </ul>
+  <p>Os dados filtrados são mapeados, gerando um card (<code>&lt;article&gt;</code>) para cada anime. Cada card contém:</p>
+  <ul>
+    <li><code>&lt;img&gt;</code>: Exibe a imagem do anime, usando <code>large_image_url</code>.</li>
+    <li><code>&lt;h1&gt;</code>: Exibe o nome do anime (campo <code>nome</code>).</li>
+    <li><code>&lt;p&gt;</code>: Mostra informações adicionais como número de episódios e favoritos.</li>
+  </ul>
   </li>
 </ul>
 
@@ -162,7 +161,7 @@ export default function VitrineAnimeCard({ animes }) {
   <li><code>styles.container</code>: Estiliza o contêiner principal do componente.</li>
   <li><code>styles.div</code>: Estiliza o elemento que envolve os cards.</li>
   <li><code>styles.card</code>: Aplica estilos individuais aos cards.</li>
-  <li><code>styles.image</code>: Estiliza as imagens dos animes.</li>
+  <li><code>styles.imagem</code>: Estiliza as imagens dos animes.</li>
   <li><code>styles.nome</code>: Aplica estilo ao título do anime.</li>
 </ul>
 
