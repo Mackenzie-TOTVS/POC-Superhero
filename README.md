@@ -1,5 +1,9 @@
 <h1>CONSTRUINDO UMA VITRINE A PARTIR DE UMA API DE ANIMES COM REACT NEXTJS</h1>
-<p>Este é um projeto desenvolvido utilizando Next.js que exibe uma lista de animes com suas respectivas informações, consumindo dados de uma API deanimes. A aplicação é composta por uma estrutura simples que traz informações como nome, imagem, número de episódios e rank dos animes, utilizando um Access Token gerado a partir da API Superhero API.</p>
+
+Autor:Bernnardo Francisco de Oliveira Silva 
+RA:10435832
+
+<p>Este é um projeto desenvolvido utilizando Next.js que exibe uma lista de animes com suas respectivas informações, consumindo dados de uma API deanimes. A aplicação é composta por uma estrutura simples que traz informações como nome, imagem, número de episódios e rank dos animes, utilizando um Access Token gerado a partir da API Superhero API. Foi disponibilizada a pasta app (a única modificada). Para ver a apliação renderizada no navegador, basta criar um projeto Next.js, copiar e colar os arquivos e usar o comando `npm run dev`.</p>
 <h1>Funcionalidades</h1>
 <ul>
 <li>Exibição de uma lista de cards de animes com suas imagens e atributos.</li>
