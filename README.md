@@ -1,5 +1,5 @@
 <h1>CONSTRUINDO UMA VITRINE A PARTIR DE UMA API DE ANIMES COM REACT NEXTJS</h1>
-<p>Este é um projeto desenvolvido utilizando Next.js que exibe uma lista de animes com suas respectivas informações, consumindo dados de uma API deanimes. A aplicação é composta por uma estrutura simples que traz informações como nome, imagem, número de episódios e número de favoritos dos animes, utilizando um Access Token gerado a partir da API Superhero API.</p>
+<p>Este é um projeto desenvolvido utilizando Next.js que exibe uma lista de animes com suas respectivas informações, consumindo dados de uma API deanimes. A aplicação é composta por uma estrutura simples que traz informações como nome, imagem, número de episódios e rank dos animes, utilizando um Access Token gerado a partir da API Superhero API.</p>
 <h1>Funcionalidades</h1>
 <ul>
 <li>Exibição de uma lista de cards de animes com suas imagens e atributos.</li>
@@ -103,10 +103,12 @@ export default function VitrineAnimeCard({ animes }) {
               data &&
               data.title &&
               data.images &&
+              data.rank &&
+              data.episodes &&
+              data.duration &&
               data.images.jpg &&
-              data.images.jpg.large_image_url
+              data.images.jpg.image_url
           ) 
-        
 ```
 <ul>
   <li>
@@ -118,8 +120,10 @@ export default function VitrineAnimeCard({ animes }) {
     <p>Os dados do array são filtrados para garantir que todos os objetos tenham os seguintes campos:</p>
     <ul>
       <li><code>title</code></li>
+      <li><code>rank</code></li>
+       <li><code>duration</code></li>
       <li><code>images</code></li>
-      <li><code>images.jpg.large_image_url</code></li>
+      <li><code>images.jpg.image_url</code></li>
     </ul>
   </li>
   <li>
@@ -129,7 +133,7 @@ export default function VitrineAnimeCard({ animes }) {
     .map((data) => (
           <article className={styles.card}>
             <img
-              src={data.images.jpg.large_image_url}
+              src={data.images.jpg.image_url}
               alt={"imagem de" + data.title}
               key={data.id || Math.random()} 
               className={styles.image}
@@ -137,13 +141,9 @@ export default function VitrineAnimeCard({ animes }) {
             />
             <h1 className={styles.nome}>{data.nome}</h1>
             <p >Episódios: {data.episodes}</p>
-            <p>Duração: {data.favorites}</p>
+            <p>Duração: {data.duration}</p>
+            <p>Rank: {data.rank}</p>
           </article>
-          ))}
-      </div>
-    </div>
-  );
-}
     ```
 
 
