@@ -24,20 +24,20 @@
 
 <h3>declaração da função principal</h3>
 
-```js
+```
 export default function Home() {
 ```
 
 
 <h3>declaração dos estados </h3>
 
-```js
+```
   const [animes, setAnimes] = useState([]); 
  ``` 
 
 <h3>Fetch com JSON Server</h3>
 
-```js
+```
   const [animes, setAnimes] = useState([]); 
 
   useEffect(() => {
