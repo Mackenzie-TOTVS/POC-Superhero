@@ -69,8 +69,4 @@ return (
 <p>Os animes são então mapeados para componentes VitrineAnimesCard, que exibem o nome, imagem, quantidade de episódios e a popularidade de cada anume.</p>
 
 <h1>Estilos</h1>
-<p>Os estilos são aplicados para garantir um layout limpo e moderno:</p>
-<ul>
-  <li>page.module.css: Define o estilo dos cards e da grid de animes, com flexbox para exibição em grid.</li>
-  <li>global.css: Estilos globais, incluindo a definição da fonte e o fundo da página.</li>
-</ul>
+
