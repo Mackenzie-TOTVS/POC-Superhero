@@ -1,4 +1,4 @@
-[21:33, 22/11/2024] Naomi: "use client";
+"use client";
 import React, { useEffect, useState } from "react";
 import styles from "./page.module.css";
 import VitrineAnimesCard from './components/VitrineAnimesCard.jsx'
