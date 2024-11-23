@@ -1,5 +1,5 @@
 <h1>CONSTRUINDO UMA VITRINE A PARTIR DE UMA API DE ANIMES COM REACT NEXTJS</h1>
-<p>Este é um projeto desenvolvido utilizando Next.js que exibe uma lista de animes com suas respectivas informações, consumindo dados de uma API deanimes. A aplicação é composta por uma estrutura simples que traz informações como nome, imagem, inteligência e força de animes, utilizando um Access Token gerado a partir da API Superhero API.</p>
+<p>Este é um projeto desenvolvido utilizando Next.js que exibe uma lista de animes com suas respectivas informações, consumindo dados de uma API deanimes. A aplicação é composta por uma estrutura simples que traz informações como nome, imagem, número de episódios e número de favoritos dos animes, utilizando um Access Token gerado a partir da API Superhero API.</p>
 <h1>Funcionalidades</h1>
 <ul>
 <li>Exibição de uma lista de cards de animes com suas imagens e atributos.</li>
@@ -74,12 +74,40 @@ return (
 <p>O código é um componente funcional React chamado <code>VitrineAnimeCard</code>. Ele recebe um array de objetos chamado <code>animes</code> como propriedade e renderiza uma vitrine com cards, onde cada card representa um anime.</p>
 
 <h3>Importações</h3>
+
+```
+import React from "react";
+import styles from "./VitrineAnimeCard.module.css";
+
+```
+
 <ul>
   <li><code>React</code>: Importado para criar o componente funcional.</li>
   <li><code>styles</code>: Importa um arquivo CSS modular para estilização do componente.</li>
 </ul>
 
 <h3>Estrutura do Componente</h3>
+
+```
+import React from "react";
+import styles from "./VitrineAnimeCard.module.css";
+
+export default function VitrineAnimeCard({ animes }) {
+  return (
+    <div className={styles.container}>
+      <div className={styles.div}>
+      {Array.isArray(animes) &&
+        animes
+          .filter(
+            (data) =>
+              data &&
+              data.title &&
+              data.images &&
+              data.images.jpg &&
+              data.images.jpg.large_image_url
+          ) 
+        
+```
 <ul>
   <li>
     <strong>Verificação da Propriedade <code>animes</code></strong>
@@ -96,6 +124,29 @@ return (
   </li>
   <li>
     <strong>Mapeamento e Renderização</strong>
+    
+    ```
+    .map((data) => (
+          <article className={styles.card}>
+            <img
+              src={data.images.jpg.large_image_url}
+              alt={"imagem de" + data.title}
+              key={data.id || Math.random()} 
+              className={styles.image}
+              
+            />
+            <h1 className={styles.nome}>{data.nome}</h1>
+            <p >Episódios: {data.episodes}</p>
+            <p>Duração: {data.favorites}</p>
+          </article>
+          ))}
+      </div>
+    </div>
+  );
+}
+    ```
+
+
     <p>Os dados filtrados são mapeados, gerando um card (<code>&lt;article&gt;</code>) para cada anime. Cada card contém:</p>
     <ul>
       <li><code>&lt;img&gt;</code>: Exibe a imagem do anime, usando <code>large_image_url</code>.</li>
