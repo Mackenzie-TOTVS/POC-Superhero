@@ -22,25 +22,52 @@
 <h1>Detalhes da Requisição</h1>
 <p>No arquivo page.js, a função useEffect faz uma chamada assíncrona para a API utilizando o Access Token gerado. Caso a requisição seja bem-sucedida, os dados dos animes são armazenados no estado da aplicação (setHerois).</p>
 
-<h2>Fetch com JSON Server</h2>
+<h3>declaração da função principal </h3>
 
+```js
+export default function Home() {
 ```
-uuseEffect(() => {
-    async function fetchAnimes() {
-      try {
-        const res = await fetch("https://api.jikan.moe/v4/seasons/2021/spring?sfw");
-        const data = await res.json(); 
-        setAnimes(data); 
-        console.log(data);
-      } catch (err) {
-        console.error("Failed to fetch heroes:", err);
+
+
+<h3>declaração dos estados </h3>
+
+```js
+  const [animes, setAnimes] = useState([]); 
+ ``` 
+
+<h3>Fetch com JSON Server</h3>
+
+```js
+  const [animes, setAnimes] = useState([]); 
+
+  useEffect(() => {
+      async function fetchAnimes() {
+        try {
+          const res = await fetch("https://api.jikan.moe/v4/seasons/2021/spring?sfw");
+          const data = await res.json(); 
+          setAnimes(data); 
+          console.log(data);
+        } catch (err) {
+          console.error("Failed to fetch heroes:", err);
+        }
       }
-    }
-
-    fetchAnimes();
-  }, []);
+  
+      fetchAnimes();
+    }, []);
 ```
-<p>Os animes são então mapeados para componentes VitrineAnimesCard, que exibem o nome, imagem, inteligência e força de cada herói.</p>
+
+```
+<h3>retorno do componente</h3>
+return (
+      <div className={styles.container}>
+          <VitrineAnimeCard animes={animes.data}>
+              
+          </VitrineAnimesCard>
+    </div>
+  );
+  ```
+<p>Os animes são então mapeados para componentes VitrineAnimesCard, que exibem o nome, imagem, quantidade de episódios e a popularidade de cada anume.</p>
+
 <h1>Estilos</h1>
 <p>Os estilos são aplicados para garantir um layout limpo e moderno:</p>
 <ul>
