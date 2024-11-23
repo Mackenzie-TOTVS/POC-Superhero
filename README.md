@@ -19,7 +19,7 @@
 </ul>
 <h1>Funcionamento</h1>
 <p>A aplicação faz uma requisição para a Superhero API para buscar informações de animes. Após obter os dados, a aplicação renderiza os cards de animes na página.</p>
-<h1>Detalhes da Requisição</h1>
+<h1>Página principa;</h1>
 <p>No arquivo page.js, a função useEffect faz uma chamada assíncrona para a API utilizando o Access Token gerado. Caso a requisição seja bem-sucedida, os dados dos animes são armazenados no estado da aplicação (setHerois).</p>
 
 <h3>declaração da função principal </h3>
