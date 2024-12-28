@@ -1,4 +1,4 @@
-<h1>Naomi  takamoto mohamed  </h1>
+
 <h1>CONSTRUINDO UMA VITRINE A PARTIR DE UMA API DE ANIMES COM REACT NEXTJS</h1>
 
 Autor: Bernnardo Francisco de Oliveira Silva <br>
